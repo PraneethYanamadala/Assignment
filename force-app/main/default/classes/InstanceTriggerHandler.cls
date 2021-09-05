@@ -21,9 +21,9 @@ public class InstanceTriggerHandler implements ITriggerHandler{
         list<Instance__c> newlst = newList; // new Instances list
         Set<Id> accountIds = new Set<Id>();
         for(Instance__c objInt : newlst) {
-            if(objInt.type__c == 'Standard') {
-                accountIds.add(objInt.Account__c);
-            }
+            
+            accountIds.add(objInt.Account__c);
+            
         }
         
         Map<Id,Account> accountMapToUpdate = new Map<Id,Account>();  
@@ -62,9 +62,9 @@ public class InstanceTriggerHandler implements ITriggerHandler{
         list<Instance__c> newlst = newList; // new Instances list
         Set<Id> accountIds = new Set<Id>();
         for(Instance__c objInt : newlst) {
-            if(objInt.type__c == 'Standard') {
-                accountIds.add(objInt.Account__c);
-            }
+            
+            accountIds.add(objInt.Account__c);
+            
         }
         
         Map<Id,Account> accountMapToUpdate = new Map<Id,Account>();  
@@ -100,7 +100,7 @@ public class InstanceTriggerHandler implements ITriggerHandler{
         }
         Set<Id> oldAccIds = new Set<Id>();
         for(Instance__c objInt : oldlst) {
-            if(objInt.type__c == 'Standard' && objInt.Account__c != accIdmap.get(objInt.Id)) {
+            if(objInt.Account__c != accIdmap.get(objInt.Id)) {
                 oldAccIds.add(objInt.Account__c);
             }
         }
@@ -148,9 +148,9 @@ public class InstanceTriggerHandler implements ITriggerHandler{
         list<Instance__c> oldLst = oldList; // new Instances list
         Set<Id> accountIds = new Set<Id>();
         for(Instance__c objInt : oldLst) {
-            if(objInt.type__c == 'Standard') {
-                accountIds.add(objInt.Account__c);
-            }
+            
+            accountIds.add(objInt.Account__c);
+            
         }
         
         Map<Id,Account> accountMapToUpdate = new Map<Id,Account>();  
